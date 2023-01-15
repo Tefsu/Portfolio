@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+@font-face {
+    font-family: 'Poppins Light';
+    src: url(../font/Poppins/Poppins-Light.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins Bold';
+    src: url(../font/Poppins/Poppins-Bold.ttf) format('truetype');
+}
+
+body {
+    height: 3000px;
+    font-family: 'Poppins Light', Arial, sans-serif;
+    background: rgb(13, 0, 61);
+    overflow-x: hidden;
+}
+
+/************************************************************
+**************** FORMATAÇÂO DO CABEÇALHO ********************
+*************************************************************/
+
+#cabecalho {
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+}
+
+#nav {
+    
+}
+
+#nav a{
+    font-size: 0.8em;
+    text-decoration: none;
+    color: #fff;
+}
+
+#nav a:hover{
+    text-decoration: underline;
+    color:#51ED37;
+    transition: 0.2s;
+}
+
+#navbar {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#navbar .navbar-item {
+    margin: 15px 30px 20px 10px ;
+}
+
+#imagem-principal {
+    background: url("../img/971.jpg") center center/cover;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+
+}
+
+#imagem-principal>div{
+    width: clamp(100px, 90%, 600px);
+    padding: 30px;
+    border-radius: 20px;
+    color: #fff;
+    margin-left: 10%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+    box-shadow: 10px 5px 20px 2px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease;
+}
+
+#nome{
+    color: #51ED37;
+    font-family: 'Poppins Bold', sans-serif;
+}
+
+#imagem-principal>div:hover{
+    transform: translateY(-12px);
+}
+
+#imagem-principal>div>a{
+    background-color: #51ED37;
+    color: rgb(0, 0, 0);
+    width: max-content;
+    padding: 8px 60px;
+    display: block;
+    border-radius: 500px;
+    font-weight:bold;
+    transition: 0.3s ease;
+}
+
+#imagem-principal>div>h1{
+    margin: 10px 0px;
+    font-size: 1.7em;
+}
+#imagem-principal>div>p{
+    margin: 10px 0px;
+}
+
+#imagem-principal>div>a:hover {
+    background-color: #000000;
+    color: #51ED37;
+}
+
