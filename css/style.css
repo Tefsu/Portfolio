@@ -15,6 +15,25 @@
     src: url(../font/Poppins/Poppins-Bold.ttf) format('truetype');
 }
 
+body::-webkit-scrollbar{
+    width:0.5rem;
+    background-color:rgba(0, 0, 0, 0.5);
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color:#51ED37;
+    border-radius: 30px;
+}
+
+::-moz-selection {
+    background: purple;
+    }
+    
+    ::selection {
+    background: #51ED37;
+    color: #000000;
+    }
+
 body {
     height: 3000px;
     font-family: 'Poppins Light', Arial, sans-serif;
@@ -32,10 +51,7 @@ body {
     position: fixed;
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(15px);
-}
-
-#nav {
-    
+    z-index: 100;
 }
 
 #nav a{
