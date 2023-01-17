@@ -1,323 +1,340 @@
+@charset "UTF-8";
 /************************************************************
 **************** FORMATAÇÂO GERAL ***************************
 *************************************************************/
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
 
-*{
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style: none;
+:root {
+  --cor-principal: #51ED37;
+  --sombra: 0px 0px 20px 2px rgba(0, 0, 0, 0.5);
 }
 
 @font-face {
-    font-family: 'Poppins Light';
-    src: url(../font/Poppins/Poppins-Light.ttf) format('truetype');
+  font-family: "Poppins Light";
+  src: url(../font/Poppins/Poppins-Light.ttf) format("truetype");
 }
-
 @font-face {
-    font-family: 'Poppins Bold';
-    src: url(../font/Poppins/Poppins-Bold.ttf) format('truetype');
+  font-family: "Poppins Bold";
+  src: url(../font/Poppins/Poppins-Bold.ttf) format("truetype");
+}
+body::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-body::-webkit-scrollbar{
-    width:0.5rem;
-    background-color:rgba(0, 0, 0, 0.5);
-}
-
-body::-webkit-scrollbar-thumb{
-    background-color:#51ED37;
-    border-radius: 30px;
+body::-webkit-scrollbar-thumb {
+  background-color: var(--cor-principal);
+  border-radius: 30px;
 }
 
 ::-moz-selection {
-    background: purple;
-    }
-    
-    ::selection {
-    background: #51ED37;
-    color: #000000;
-    }
+  background: purple;
+}
+
+::selection {
+  background: var(--cor-principal);
+  color: #000000;
+}
 
 body {
-    height: 3000px;
-    font-family: 'Poppins Light', Arial, sans-serif;
-    background: rgb(13, 0, 61);
-    overflow-x: hidden;
+  height: 3000px;
+  font-family: "Poppins Light", Arial, sans-serif;
+  background: rgb(13, 0, 61);
+  overflow-x: hidden;
 }
 
 .secoes {
-    color: #fff;
-    margin-top: 80px;
-    margin-bottom: 20px;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+  color: #fff;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
 }
+
 .sub-secoes {
-    color: #fff;
-    margin: 10px;
-    display: flex;
-    justify-content: center;
+  color: #fff;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
 }
+
 .barrinha {
-    width: 30px;
-    height: 3px;
-    background: #51ED37;
-    border-radius: 500px;
+  width: 30px;
+  height: 3px;
+  background: var(--cor-principal);
+  border-radius: 500px;
 }
 
 /************************************************************
 **************** FORMATAÇÂO DO CABEÇALHO ********************
 *************************************************************/
-
 #cabecalho {
-    height: auto;
-    width: 100%;
-    position: fixed;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(15px);
-    z-index: 1000;
+  height: auto;
+  width: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  z-index: 1000;
 }
-
-#nav a{
-    font-size: 0.8em;
-    text-decoration: none;
-    color: #fff;
+#cabecalho #menu-button {
+  float: right;
+  font-size: 20px;
+  padding: 5px 10px;
+  margin: 5px;
+  box-shadow: 0px 0px 4px rgb(0, 0, 0);
+  background: var(--cor-principal);
+  border-radius: 10px;
+  border: none;
+  outline: none;
 }
-
-#nav a:hover{
-    text-decoration: underline;
-    color:#51ED37;
-    transition: 0.2s;
+#cabecalho #nav a {
+  font-size: 0.8em;
+  text-decoration: none;
+  color: #fff;
 }
-
-#navbar {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
+#cabecalho #nav a:hover {
+  text-decoration: underline;
+  color: var(--cor-principal);
+  transition: 0.2s;
 }
-
-#menu-button {
-    float: right;
-    font-size: 20px;
-    padding: 5px 10px;
-    margin: 5px;
-    box-shadow: 0px 0px 4px rgb(0, 0, 0);
-    background: #51ED37;
-    border-radius: 10px;
-    border: none;
-    outline: none;
-
+#cabecalho #nav #navbar {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+#cabecalho #nav #navbar .navbar-item {
+  margin: 15px 30px 20px 10px;
 }
 
 @media (min-width: 599.98px) {
-    #menu-button {
-        display: none;
-    }
+  #menu-button {
+    display: none;
+  }
 }
-
-#navbar .navbar-item {
-    margin: 15px 30px 20px 10px ;
-}
-
-
-
 /************************************************************
 **************** FORMATAÇÂO DO MENU LATERAL *****************
 *************************************************************/
-
-#redes-sociais {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: clamp(10px, 10%, 140px);
-    height: 100%;
-    z-index: 900;
+#conteudo #redes-sociais {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: clamp(10px, 10%, 140px);
+  height: 100%;
+  z-index: 900;
 }
-
-#nav-lateral {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 250px;
-    width: 60px;
-    background: #51ED37;
-    box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.5);
-    border-radius: 500px;
-    transform: scale(0.85);
-    transition: 0.3s;
-    text-align: center;
+#conteudo #redes-sociais #nav-lateral {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  width: 60px;
+  background: var(--cor-principal);
+  box-shadow: var(--sombra);
+  border-radius: 500px;
+  transform: scale(0.85);
+  transition: 0.3s;
+  text-align: center;
 }
-#nav-lateral:hover {
-    transform: scale(0.9);
+#conteudo #redes-sociais #nav-lateral:hover {
+  transform: scale(0.9);
 }
-
-#navbar-lateral li a i{
-    font-size: 40px;
-    color: rgb(0, 0, 0);
-    margin: 12px auto;
+#conteudo #redes-sociais #nav-lateral li a i {
+  font-size: 40px;
+  color: rgb(0, 0, 0);
+  margin: 12px auto;
 }
-#navbar-lateral li a i{    
-    font-size: 40px;
-    padding: 0;
+#conteudo #redes-sociais #nav-lateral li a .fa-instagram:hover {
+  color: #E1306C;
+  text-shadow: 0px 0px 2px #E1306C, 0px 0px 4px #C13584, 0px 0px 6px #833ab4;
 }
-#conteudo a .fa-instagram:hover{
-    color: #E1306C;
-    text-shadow: 0px 0px 2px #E1306C,
-    0px 0px 4px #C13584,
-    0px 0px 6px #833ab4;
+#conteudo #redes-sociais #nav-lateral li a .fa-linkedin-in:hover {
+  color: #0a66c2;
+  text-shadow: 0px 0px 4px #0073e6, 0px 0px 6px #8d6cab;
 }
-#conteudo a .fa-linkedin-in:hover{
-    color:#0a66c2 ;
-    text-shadow: 0px 0px 4px #0073e6,
-    0px 0px 6px #8d6cab;
-}
-#conteudo a .fa-github:hover{
-    color: #333;
-    text-shadow: 0px 0px 4px #362a49,
-    0px 0px 6px #1c1525;
+#conteudo #redes-sociais #nav-lateral li a .fa-github:hover {
+  color: #333;
+  text-shadow: 0px 0px 4px #362a49, 0px 0px 6px #1c1525;
 }
 
 /************************************************************
 **************** FORMATAÇÂO DO HOME *************************
 *************************************************************/
-
 #imagem-principal {
-    background: url("../img/971.jpg") center center/cover;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    position: relative;
+  background: url("../img/971.jpg") center center/cover;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
-
-#imagem-principal>div{
-    width: clamp(100px, 90%, 600px);
-    padding: 30px;
-    border-radius: 20px;
-    color: #fff;
-    margin-left: 10%;
-    margin-right: 10%;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(15px);
-    box-shadow: 10px 5px 20px 2px rgba(0, 0, 0, 0.5);
-    transition: 0.3s ease;
+#imagem-principal div {
+  width: clamp(100px, 90%, 600px);
+  padding: 30px;
+  border-radius: 20px;
+  color: #fff;
+  margin-left: 10%;
+  margin-right: 10%;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  box-shadow: 10px 5px 20px 2px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease;
 }
-
-#nome{
-    color: #51ED37;
-    font-family: 'Poppins Bold', sans-serif;
+#imagem-principal div:hover {
+  transform: translateY(-12px);
 }
-
-#imagem-principal>div:hover{
-    transform: translateY(-12px);
+#imagem-principal div #nome {
+  color: var(--cor-principal);
+  font-family: "Poppins Bold", sans-serif;
 }
-
-#imagem-principal>div>a{
-    background-color: #51ED37;
-    color: rgb(0, 0, 0);
-    width: max-content;
-    padding: 8px 60px;
-    display: block;
-    border-radius: 500px;
-    font-weight:bold;
-    transition: 0.3s ease;
+#imagem-principal div h1 {
+  margin: 10px 0px;
+  font-size: 1.7em;
 }
-
-#imagem-principal>div>h1{
-    margin: 10px 0px;
-    font-size: 1.7em;
+#imagem-principal div a {
+  background-color: var(--cor-principal);
+  color: rgb(0, 0, 0);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 8px 60px;
+  display: block;
+  border-radius: 500px;
+  font-weight: bold;
+  transition: 1s ease;
 }
-#imagem-principal>div>p{
-    margin: 10px 0px;
+#imagem-principal div a:hover {
+  background-color: #000000;
+  color: var(--cor-principal);
 }
-
-#imagem-principal>div>a:hover {
-    background-color: #000000;
-    color: #51ED37;
+#imagem-principal div p {
+  margin: 10px 0px;
 }
 
 /************************************************************
 **************** FORMATAÇÂO DO SOBRE *************************
 *************************************************************/
-
 #sobre {
-    background: #00000005;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    position: relative;
+  background: rgba(0, 0, 0, 0.0196078431);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+#sobre #sobre-principal {
+  width: clamp(300px, 80%, 1900px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#sobre #sobre-principal #sobre-informacoes {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+}
+#sobre #sobre-principal #sobre-informacoes .sobre-imagem {
+  margin: 0px 10px 20px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#sobre #sobre-principal #sobre-informacoes .sobre-imagem .imagem {
+  width: 150px;
+  height: 150px;
+  background: url(../img/foto-perfil.jpg) center center/cover;
+  box-shadow: 0px 0px 6px rgb(0, 0, 0);
+  border-radius: 500px;
+}
+#sobre #sobre-principal #sobre-informacoes .sobre-texto {
+  margin-right: 5%;
+  padding: 30px;
+  border-radius: 20px;
+  color: #fff;
+  margin-right: 5%;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: var(--sombra);
+  transition: 0.3s ease;
 }
 
-#sobre-principal {
-    width: clamp(300px, 80%, 1900px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#skills {
+  background: rgba(0, 0, 0, 0.0196078431);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  position: relative;
 }
-
-#sobre-informacoes {
-    display: flex;
-    flex-direction: row;
-    width: 90%;
+#skills #skills-principal {
+  width: clamp(300px, 80%, 1900px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#skills #skills-principal .icones {
+  font-size: 35px;
+  color: var(--cor-principal);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+#skills #skills-principal .icones .linguagens {
+  background-color: #101010;
+  height: 100px;
+  width: 100px;
+  border-radius: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--sombra);
 }
 
 @media only screen and (max-width: 1000px) {
-    #sobre {
-        height: auto;
-    }
-    #sobre-informacoes {
-        display: block;
-        justify-content: center;
-        width: 100%;
-    }
-
-}
-
-.sobre-imagem {
-    margin: 0px 10px 20px 0px;
-    display: flex;
+  #sobre {
+    height: auto;
+  }
+  #sobre #sobre-principal #sobre-informacoes {
+    display: block;
     justify-content: center;
-    align-items: center;
+    width: 100%;
+  }
 }
-
-.imagem {
-    width: 150px;
-    height: 150px;
-    background: url(../img/foto-perfil.jpg) center center/cover;
-    box-shadow: 0px 0px 6px rgb(0, 0, 0);
-    border-radius: 500px;
-}
-
-.sobre-texto{
-    margin-right: 5%;
-    padding: 30px;
-    border-radius: 20px;
-    color: #fff;
-    margin-right: 5%;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(15px);
-    box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.5);
-    transition: 0.3s ease;
-}
-
 /************************************************************
 **************** FORMATAÇÂO DOS PROJETOS *************************
 *************************************************************/
-
 #projetos {
-    background: #00000005;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    position: relative;
+  background: rgba(0, 0, 0, 0.0196078431);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  position: relative;
 }
+
+/* Animação scroll load */
+.hidden {
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: 1s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateX(0);
+}/*# sourceMappingURL=style.css.map */
