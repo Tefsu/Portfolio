@@ -312,12 +312,15 @@ body {
 
 @media only screen and (max-width: 1000px) {
   #sobre {
-    height: auto;
+    height: 100vh;
   }
   #sobre #sobre-principal #sobre-informacoes {
     display: block;
     justify-content: center;
     width: 80vw;
+  }
+  #skills {
+    height: 100vh;
   }
   #skills #skills-principal .icones {
     font-size: 30px;
