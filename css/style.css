@@ -319,6 +319,16 @@ body {
     justify-content: center;
     width: 100%;
   }
+  #skills {
+    height: auto;
+  }
+  #skills #skills-principal .icones {
+    font-size: 20px;
+  }
+  #skills #skills-principal .icones .linguagens {
+    height: 50px;
+    width: 50px;
+  }
 }
 /************************************************************
 **************** FORMATAÇÂO DOS PROJETOS *************************
