@@ -327,7 +327,7 @@ body {
     position: relative;
 
     #skills-principal {
-        width: clamp(300px, 80%, 1900px);
+        width: clamp(200px, 80%, 1900px);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -371,7 +371,7 @@ body {
             #sobre-informacoes {
                 display: block;
                 justify-content: center;
-                width: 100%;
+                width: 80vw;
             }
         }
     }
@@ -381,11 +381,11 @@ body {
         #skills-principal {
     
             .icones {
-                font-size: 25px;
-                width: 90%;
+                font-size: 30px;
+                width: 90vw;
                 .linguagens {
-                    height: 60px;
-                    width: 60px;    
+                    height: 70px;
+                    width: 70px;    
                 }           
             }
         }
