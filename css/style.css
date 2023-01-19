@@ -11,7 +11,7 @@
 
 :root {
   --cor-principal: #51ED37;
-  --sombra: 0px 0px 20px 2px rgba(0, 0, 0, 0.5);
+  --sombra: 0px 0px 10px 3px rgba(0, 0, 0, 0.6);
 }
 
 @font-face {
@@ -24,7 +24,7 @@
 }
 body::-webkit-scrollbar {
   width: 0.5rem;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.671);
 }
 
 body::-webkit-scrollbar-thumb {
@@ -38,13 +38,13 @@ body::-webkit-scrollbar-thumb {
 
 ::selection {
   background: var(--cor-principal);
-  color: #000000;
+  color: #0c0c0c;
 }
 
 body {
   height: 3000px;
   font-family: "Poppins Light", Arial, sans-serif;
-  background: rgb(13, 0, 61);
+  background: #1e1e1e;
   overflow-x: hidden;
 }
 
@@ -174,7 +174,7 @@ body {
   background: url("../img/971.jpg") center center/cover;
   width: 100vw;
   height: 100vh;
-  overflow-x: hidden;
+  overflow: hidden;
   display: flex;
   align-items: center;
   position: relative;
@@ -230,7 +230,7 @@ body {
   background: rgba(0, 0, 0, 0.0196078431);
   width: 100vw;
   height: 100vh;
-  overflow-x: hidden;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   position: relative;
@@ -256,7 +256,7 @@ body {
   width: 150px;
   height: 150px;
   background: url(../img/foto-perfil.jpg) center center/cover;
-  box-shadow: 0px 0px 6px rgb(0, 0, 0);
+  box-shadow: var(--sombra);
   border-radius: 500px;
 }
 #sobre #sobre-principal #sobre-informacoes .sobre-texto {
@@ -274,7 +274,7 @@ body {
   background: rgba(0, 0, 0, 0.0196078431);
   width: 100vw;
   height: 100vh;
-  overflow-x: hidden;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   position: relative;
@@ -291,18 +291,19 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: 60%;
+  width: 70%;
 }
 #skills #skills-principal .icones .linguagens {
   background-color: #101010;
   height: 100px;
   width: 100px;
-  margin: 5px;
+  margin: 10px;
   border-radius: 13px;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: var(--sombra);
+  border: 1px solid #0e0e0e;
 }
 #skills #skills-principal .icones .linguagens:hover {
   outline: 3px solid var(--cor-principal);
