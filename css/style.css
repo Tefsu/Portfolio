@@ -206,7 +206,6 @@ body {
 #imagem-principal div a {
   background-color: var(--cor-principal);
   color: rgb(0, 0, 0);
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   padding: 8px 60px;
@@ -350,6 +349,49 @@ body {
   width: clamp(300px, 80%, 1900px);
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+#projetos #projetos-principal .carousel-container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#projetos #projetos-principal .carousel-container .carousel-slide {
+  display: none;
+  position: relative;
+  border-radius: 18px;
+  box-shadow: var(--sombra);
+}
+#projetos #projetos-principal .carousel-container .carousel-slide img {
+  border-radius: 18px;
+  width: 65vw;
+  height: 65vh;
+}
+#projetos #projetos-principal .carousel-container .carousel-slide .carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-indent: 10px;
+  padding: 10px 0 10px 0;
+  border-radius: 0 0 18px 18px;
+  font-size: 16px;
+}
+#projetos #projetos-principal .carousel-container .carousel-slide .carousel-caption h1 {
+  text-align: center;
+  color: var(--cor-principal);
+}
+#projetos #projetos-principal .carousel-container .carousel-slide .carousel-caption p {
+  text-align: center;
+  margin-bottom: 5px;
+}
+#projetos #projetos-principal .carousel-container .active {
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
